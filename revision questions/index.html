@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MCQ Quiz Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <h1>MCQ Quiz Game</h1>
+        <div class="progress-wrap" aria-label="progress">
+          <div id="progressBar" class="progress-bar"></div>
+          <span id="progressText" class="progress-text">0 / 125</span>
+        </div>
+      </header>
+
+      <main class="card" role="region" aria-live="polite">
+        <div class="meta">
+          <span id="qIndex">Question 1</span>
+          <span id="score">Score: 0</span>
+        </div>
+
+        <h2 id="questionText" class="question">
+          Question text will appear here
+        </h2>
+
+        <ul
+          id="options"
+          class="options"
+          role="listbox"
+          aria-label="answer options"
+        >
+          <!-- options injected -->
+        </ul>
+
+        <div class="hint-area">
+          <button
+            id="hintBtn"
+            class="btn secondary"
+            aria-expanded="false"
+            aria-controls="hintText"
+          >
+            Show Hint
+          </button>
+          <p id="hintText" class="hint hidden"></p>
+        </div>
+
+        <div class="controls">
+          <button id="nextBtn" class="btn" disabled>Next</button>
+          <button id="restartBtn" class="btn ghost hidden">Restart</button>
+        </div>
+      </main>
+
+      <footer class="foot">
+        <small>Built with HTML, CSS &amp; JavaScript</small>
+      </footer>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
